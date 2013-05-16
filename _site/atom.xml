@@ -4,7 +4,7 @@
  <title>blogwarEyd dy3rawgold</title>
  <link href="http://scottie33.github.io/" rel="self"/>
  <link href="http://scottie33.github.io"/>
- <updated>2013-05-17T01:39:41+08:00</updated>
+ <updated>2013-05-17T01:40:57+08:00</updated>
  <id>http://scottie33.github.io</id>
  <author>
    <name>scottie33</name>
@@ -71,47 +71,7 @@ c: makepair001.py | makepair_expand.py&lt;/code&gt;&lt;/pre&gt;
 a, draw_data.gpl 
     [ please note, tempdata.gpl needed, 
     [ so actually these 2 are important and portable for any drawing) ]
-b, showdata.bash&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;HOW-TO:&lt;/p&gt;
-
-&lt;p&gt;e.g.:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./readlog.py example.log
-./create_html.bash example.gnuplot.dat (this file is created by the last command)&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./readlog.py example.log Step example.inputfornextcmd 
-./create_html.bash example.inputfornextcmd&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;, topology of the usage:&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;            / create_html.bash
-readlog.py {
-            \ getstress.py
-rdf.bash -&amp;gt; allpeak.py -&amp;gt; getpdb.bash (.psf needed, using lmp2pdb.py to generate it)
-contact.bash (.psf needed, using lmp2pdb.py to generate it) 
-allpeak.py [ need explanation ]
-getpdb.bash (.psf ... )&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;clean.bash will do purge for this command, use it carefully.&lt;/p&gt;
-
-&lt;p&gt;avevol.py (to see energy-volume and create the volume.in for the next deform.in if needed)&lt;/p&gt;
-
-&lt;p&gt;Attention:&lt;/p&gt;
-
-&lt;p&gt;3, please be noted: trajectoy_analyze.tcl is great for the analysis of trajectory loaded in VMD, read the source for the example.&lt;/p&gt;
-
-&lt;p&gt;O(ne) C(lick) S(eries): Lammps .log file.&lt;/p&gt;
-
-&lt;p&gt;Dependencies: bash, tcl, python, gnuplot, VMD;&lt;/p&gt;
-
-&lt;p&gt;Comman Line Format : cmd log-filename.&lt;/p&gt;
-
-&lt;p&gt;description: you will have a .html (or all figures in .eps) of the information you are able to get from .log from a Lammps production run.&lt;/p&gt;
-
-&lt;p&gt;if any problem, improvement made, or any Q, please contact me: leiw@ustc.edu.cn&lt;/p&gt;</content>
+b, showdata.bash&lt;/code&gt;&lt;/pre&gt;</content>
  </entry>
  
  <entry>

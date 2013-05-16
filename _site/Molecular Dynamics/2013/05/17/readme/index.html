@@ -170,46 +170,6 @@ a, draw_data.gpl
     [ please note, tempdata.gpl needed, 
     [ so actually these 2 are important and portable for any drawing) ]
 b, showdata.bash</code></pre>
-
-<p>HOW-TO:</p>
-
-<p>e.g.:</p>
-
-<pre><code>./readlog.py example.log
-./create_html.bash example.gnuplot.dat (this file is created by the last command)</code></pre>
-
-<p>or:</p>
-
-<pre><code>./readlog.py example.log Step example.inputfornextcmd 
-./create_html.bash example.inputfornextcmd</code></pre>
-
-<p><em>, topology of the usage:</em></p>
-
-<pre><code>            / create_html.bash
-readlog.py {
-            \ getstress.py
-rdf.bash -&gt; allpeak.py -&gt; getpdb.bash (.psf needed, using lmp2pdb.py to generate it)
-contact.bash (.psf needed, using lmp2pdb.py to generate it) 
-allpeak.py [ need explanation ]
-getpdb.bash (.psf ... )</code></pre>
-
-<p>clean.bash will do purge for this command, use it carefully.</p>
-
-<p>avevol.py (to see energy-volume and create the volume.in for the next deform.in if needed)</p>
-
-<p>Attention:</p>
-
-<p>3, please be noted: trajectoy_analyze.tcl is great for the analysis of trajectory loaded in VMD, read the source for the example.</p>
-
-<p>O(ne) C(lick) S(eries): Lammps .log file.</p>
-
-<p>Dependencies: bash, tcl, python, gnuplot, VMD;</p>
-
-<p>Comman Line Format : cmd log-filename.</p>
-
-<p>description: you will have a .html (or all figures in .eps) of the information you are able to get from .log from a Lammps production run.</p>
-
-<p>if any problem, improvement made, or any Q, please contact me: leiw@ustc.edu.cn</p>
     </div>
 
   
