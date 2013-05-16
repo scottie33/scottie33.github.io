@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PNC system step by step</title>
+    <meta name="description" content="">
+    <meta name="author" content="scottie33">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">blogwarEyd dy3rawgold</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>PNC system step by step </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>17 May 2013</strong>
+    </div>
+    <div class="content">
+      <p><img alt='pnp.png' src='/images/2013/April/25/pnp.png' /></p>
+<hr />
+<p><img alt='beg.png' src='/images/2013/April/25/beg.png' /></p>
+<hr />
+<p><img alt='GlassTT.eps.png' src='/images/2013/April/25/GlassTT.eps.png' /></p>
+<hr />
+<p><img alt='ff-rdf.eps.png' src='/images/2013/April/25/ff-rdf.eps.png' /></p>
+
+<p>to get the newest version:</p>
+
+<pre><code>wget https://github.com/scottie33/amorphous_polymer_lammps/archive/master.zip </code></pre>
+
+<p>HINT: just hit any command mentioned above in the command line to see &#8216;how to&#8217; ~</p>
+
+<p><span>currently dir ./oneNP/ will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.</span></p>
+
+<p>pre-run: <span>goto 3</span><em>1</em>, lmp2pdb.py data.data (generate .psf and .pdb for post-processing) <span>goto 3</span><em>2</em>, makepair will generate a pair_potential file for you, revise it if needed. <span>dont use this when system too compressed</span>#2, after .dcd loaded by vmd: source doit.tcl 3, protocol to initialization of the system: a: random-NP.py | cubic-NP.py (revise it mannually) <span>before mc_gen, please delete NP.dat if there&#8217;s no NanoParticle in your system;</span> b: mc_gen.bash <span>make_mc_gen.x</span> (revise .input whenever needed) c: makepair001.py | makepair_expand.py mv pairfile pairfile_rep (do all the repel for minimization) mv pairfile pairfile_no_soft (for the rest of the protocol, please do not ask why&#8230;)</p>
+
+<p>run: 1, runlist.bash</p>
+
+<p>post-run: you can use the following cli to see your data-fig: 1, read the logfile: readlog.py <em>, for the <span>keyword</span>, we shall set it the 1st keyword of dump keywords in your .log file, normally &#8220;Step&#8221; 2, see the result of logfile by view: create_html.bash <span>dependencies:</span> a, draw_data.gpl <span>please note, tempdata.gpl needed, <span>so actually these 2 are important and portable for any drawing)</span> b, showdata.bash HOW-TO: e.g.: ./readlog.py example.log ./create_html.bash example.gnuplot.dat (this file is created by the last command) or: ./readlog.py example.log Step example.inputfornextcmd ./create_html.bash example.inputfornextcmd</span></em></p>
+
+<p><em>, topology of the usage: / create_html.bash readlog.py { \ getstress.py rdf.bash -&gt; allpeak.py -&gt; getpdb.bash (.psf needed, using lmp2pdb.py to generate it) contact.bash (.psf needed, using lmp2pdb.py to generate it) allpeak.py <span>need explanation</span> getpdb.bash (.psf &#8230; )</em></p>
+
+<p>clean.bash will do purge for this command, use it carefully.</p>
+
+<p>avevol.py (to see energy-volume and create the volume.in for the next deform.in if needed) Attention:</p>
+
+<p>3, please be noted: trajectoy_analyze.tcl is great for the analysis of trajectory loaded in VMD, read the source for the example.</p>
+
+<p>O(ne) C(lick) S(eries): Lammps .log file. Dependencies: bash, tcl, python, gnuplot, VMD; Comman Line Format : cmd log-filename. description: you will have a .html (or all figures in .eps) of the information you are able to get from .log from a Lammps production run.</p>
+
+<p>if any problem, improvement made, or any Q, please contact me: leiw@ustc.edu.cn</p>
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#Molecular Dynamics-ref">
+    		Molecular Dynamics <span>5</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#lammps-ref">lammps <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#coarse grain-ref">coarse grain <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#polymer-ref">polymer <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#pnc-ref">pnc <span>4</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/Molecular%20Dynamics/2013/05/04/2-snapshots" title="2 snapshots">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'dy3rawgold'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 scottie33
+          <!-- with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> -->
+        </p>
+      </footer>
+
+    </div>
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33930330-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+
