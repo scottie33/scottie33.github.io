@@ -5,8 +5,8 @@
         <description>blogwarEyd dy3rawgold - scottie33</description>
         <link>http://scottie33.github.io</link>
         <link>http://scottie33.github.io</link>
-        <lastBuildDate>2013-05-17T01:34:07+08:00</lastBuildDate>
-        <pubDate>2013-05-17T01:34:07+08:00</pubDate>
+        <lastBuildDate>2013-05-17T01:37:34+08:00</lastBuildDate>
+        <pubDate>2013-05-17T01:37:34+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -27,14 +27,78 @@
 &lt;p&gt;HINT: just hit any command mentioned above in the command line to see &amp;#8216;how to&amp;#8217; ~&lt;/p&gt;
 
 &lt;p&gt;[currently dir &lt;strong&gt;oneNP&lt;/strong&gt; will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.]&lt;/p&gt;
-
+&lt;hr /&gt;
 &lt;p&gt;pre-run:&lt;/p&gt;
 
 &lt;p&gt;[goto 3]&lt;em&gt;1&lt;/em&gt;, lmp2pdb.py data.data (generate .psf and .pdb for post-processing)&lt;/p&gt;
 
 &lt;p&gt;[don&amp;#8217;t use this when system&amp;#8217;s compressed too much]&lt;em&gt;2&lt;/em&gt;, after .dcd loaded by vmd: source doit.tcl&lt;/p&gt;
 
-&lt;p&gt;3, protocol to initialization of the system: a: random-NP.py | cubic-NP.py (revise it mannually) &lt;span&gt;before mc_gen, please delete NP.dat if there&amp;#8217;s no NanoParticle in your system;&lt;/span&gt; b: mc_gen.bash [make_mc_gen.x] [mc_gen] (revise .input whenever needed) c: makepair001.py | makepair_expand.py mv pairfile pairfile_rep (do all the repel for minimization) mv pairfile pairfile_no_soft (for the rest of the protocol, please do not ask why&amp;#8230;)&lt;/p&gt;</description>
+&lt;p&gt;3, protocol to initialization of the system:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a: random-NP.py | cubic-NP.py (revise it mannually)
+[before mc_gen, please delete NP.dat if there&amp;#39;s no NanoParticle in your system]
+b: mc_gen.bash [make_mc_gen.x] [mc_gen] (revise .input whenever needed)
+c: makepair001.py | makepair_expand.py&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mv pairfile &lt;strong&gt;pairfile_rep&lt;/strong&gt; (do all the repel for minimization)&lt;/p&gt;
+
+&lt;p&gt;mv pairfile &lt;strong&gt;pairfile_no_soft&lt;/strong&gt; (for the rest of the protocol, please do not ask why&amp;#8230;)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;run:&lt;/p&gt;
+
+&lt;p&gt;1, runlist.bash&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;post-run:&lt;/p&gt;
+
+&lt;p&gt;you can use the following cli to see your data-fig:&lt;/p&gt;
+
+&lt;p&gt;1, read the logfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;readlog.py&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;, for the &lt;span&gt;keyword&lt;/span&gt;, we shall set it the 1st keyword of dump keywords in your .log file, normally &amp;#8220;Step&amp;#8221;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;2, see the result of logfile by view:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;create_html.bash
+[ dependencies: ]
+a, draw_data.gpl 
+    [ please note, tempdata.gpl needed, 
+    [ so actually these 2 are important and portable for any drawing) ]
+b, showdata.bash&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;HOW-TO:&lt;/p&gt;
+
+&lt;p&gt;e.g.:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./readlog.py example.log
+./create_html.bash example.gnuplot.dat (this file is created by the last command)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./readlog.py example.log Step example.inputfornextcmd 
+./create_html.bash example.inputfornextcmd&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;, topology of the usage: / create_html.bash readlog.py { \ getstress.py rdf.bash -&amp;gt; allpeak.py -&amp;gt; getpdb.bash (.psf needed, using lmp2pdb.py to generate it) contact.bash (.psf needed, using lmp2pdb.py to generate it) allpeak.py &lt;span&gt;need explanation&lt;/span&gt; getpdb.bash (.psf &amp;#8230; )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;clean.bash will do purge for this command, use it carefully.&lt;/p&gt;
+
+&lt;p&gt;avevol.py (to see energy-volume and create the volume.in for the next deform.in if needed)&lt;/p&gt;
+
+&lt;p&gt;Attention:&lt;/p&gt;
+
+&lt;p&gt;3, please be noted: trajectoy_analyze.tcl is great for the analysis of trajectory loaded in VMD, read the source for the example.&lt;/p&gt;
+
+&lt;p&gt;O(ne) C(lick) S(eries): Lammps .log file.&lt;/p&gt;
+
+&lt;p&gt;Dependencies: bash, tcl, python, gnuplot, VMD;&lt;/p&gt;
+
+&lt;p&gt;Comman Line Format : cmd log-filename.&lt;/p&gt;
+
+&lt;p&gt;description: you will have a .html (or all figures in .eps) of the information you are able to get from .log from a Lammps production run.&lt;/p&gt;
+
+&lt;p&gt;if any problem, improvement made, or any Q, please contact me: leiw@ustc.edu.cn&lt;/p&gt;</description>
                 <link>http://scottie33.github.io/Molecular%20Dynamics/2013/05/17/readme</link>
                 <guid>http://scottie33.github.io/Molecular%20Dynamics/2013/05/17/readme</guid>
                 <pubDate>2013-05-17T00:00:00+08:00</pubDate>
@@ -153,7 +217,7 @@
 
 &lt;pre&gt;&lt;code&gt;[www.google.com](http://www.google.com &amp;quot;go to google and dig something out to eat, pal&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;you will get &lt;a title='go to google and dig something out to eat, pal' href='http://www.google.com'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;you will get &lt;a href='http://www.google.com' title='go to google and dig something out to eat, pal'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
 
 &lt;p&gt;Or, &lt;strong&gt;&lt;em&gt;alternately&lt;/em&gt;&lt;/strong&gt;, may you type this:&lt;/p&gt;
 
@@ -170,21 +234,21 @@
    [1]: http://www.google.com &amp;quot;better&amp;quot;
    [2]: http://www.bing.com &amp;quot;worse&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;No, I am not just saying it, since it&amp;#8217;s the truth:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;*[google][1] is better than [bing][2]* (*italic*);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;**[google][1] is better than [bing][2]** (**bold**);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;***[google][1] is better than [bing][2]*** (***bold &amp;amp; italic***);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;_And &amp;quot;_&amp;quot; also has the same effect here just as &amp;quot;\*&amp;quot;._&lt;/code&gt;&lt;/pre&gt;
 

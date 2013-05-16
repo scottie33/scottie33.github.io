@@ -130,14 +130,78 @@
 <p>HINT: just hit any command mentioned above in the command line to see &#8216;how to&#8217; ~</p>
 
 <p>[currently dir <strong>oneNP</strong> will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.]</p>
-
+<hr />
 <p>pre-run:</p>
 
 <p>[goto 3]<em>1</em>, lmp2pdb.py data.data (generate .psf and .pdb for post-processing)</p>
 
 <p>[don&#8217;t use this when system&#8217;s compressed too much]<em>2</em>, after .dcd loaded by vmd: source doit.tcl</p>
 
-<p>3, protocol to initialization of the system: a: random-NP.py | cubic-NP.py (revise it mannually) <span>before mc_gen, please delete NP.dat if there&#8217;s no NanoParticle in your system;</span> b: mc_gen.bash [make_mc_gen.x] [mc_gen] (revise .input whenever needed) c: makepair001.py | makepair_expand.py mv pairfile pairfile_rep (do all the repel for minimization) mv pairfile pairfile_no_soft (for the rest of the protocol, please do not ask why&#8230;)</p>
+<p>3, protocol to initialization of the system:</p>
+
+<pre><code>a: random-NP.py | cubic-NP.py (revise it mannually)
+[before mc_gen, please delete NP.dat if there&#39;s no NanoParticle in your system]
+b: mc_gen.bash [make_mc_gen.x] [mc_gen] (revise .input whenever needed)
+c: makepair001.py | makepair_expand.py</code></pre>
+
+<p>mv pairfile <strong>pairfile_rep</strong> (do all the repel for minimization)</p>
+
+<p>mv pairfile <strong>pairfile_no_soft</strong> (for the rest of the protocol, please do not ask why&#8230;)</p>
+<hr />
+<p>run:</p>
+
+<p>1, runlist.bash</p>
+<hr />
+<p>post-run:</p>
+
+<p>you can use the following cli to see your data-fig:</p>
+
+<p>1, read the logfile:</p>
+
+<pre><code>readlog.py</code></pre>
+
+<p><em>, for the <span>keyword</span>, we shall set it the 1st keyword of dump keywords in your .log file, normally &#8220;Step&#8221;</em></p>
+
+<p>2, see the result of logfile by view:</p>
+
+<pre><code>create_html.bash
+[ dependencies: ]
+a, draw_data.gpl 
+    [ please note, tempdata.gpl needed, 
+    [ so actually these 2 are important and portable for any drawing) ]
+b, showdata.bash</code></pre>
+
+<p>HOW-TO:</p>
+
+<p>e.g.:</p>
+
+<pre><code>./readlog.py example.log
+./create_html.bash example.gnuplot.dat (this file is created by the last command)</code></pre>
+
+<p>or:</p>
+
+<pre><code>./readlog.py example.log Step example.inputfornextcmd 
+./create_html.bash example.inputfornextcmd</code></pre>
+
+<p><em>, topology of the usage: / create_html.bash readlog.py { \ getstress.py rdf.bash -&gt; allpeak.py -&gt; getpdb.bash (.psf needed, using lmp2pdb.py to generate it) contact.bash (.psf needed, using lmp2pdb.py to generate it) allpeak.py <span>need explanation</span> getpdb.bash (.psf &#8230; )</em></p>
+
+<p>clean.bash will do purge for this command, use it carefully.</p>
+
+<p>avevol.py (to see energy-volume and create the volume.in for the next deform.in if needed)</p>
+
+<p>Attention:</p>
+
+<p>3, please be noted: trajectoy_analyze.tcl is great for the analysis of trajectory loaded in VMD, read the source for the example.</p>
+
+<p>O(ne) C(lick) S(eries): Lammps .log file.</p>
+
+<p>Dependencies: bash, tcl, python, gnuplot, VMD;</p>
+
+<p>Comman Line Format : cmd log-filename.</p>
+
+<p>description: you will have a .html (or all figures in .eps) of the information you are able to get from .log from a Lammps production run.</p>
+
+<p>if any problem, improvement made, or any Q, please contact me: leiw@ustc.edu.cn</p>
     </div>
 
   
