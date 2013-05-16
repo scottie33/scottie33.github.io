@@ -129,7 +129,15 @@
 
 <p>HINT: just hit any command mentioned above in the command line to see &#8216;how to&#8217; ~</p>
 
-<p>currently dir <strong>oneNP</strong> will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.</p>
+<p>[currently dir <strong>oneNP</strong> will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.]</p>
+
+<p>pre-run:</p>
+
+<p>[goto 3]<em>1</em>, lmp2pdb.py data.data (generate .psf and .pdb for post-processing)</p>
+
+<p>[don&#8217;t use this when system&#8217;s compressed too much]<em>2</em>, after .dcd loaded by vmd: source doit.tcl</p>
+
+<p>3, protocol to initialization of the system: a: random-NP.py | cubic-NP.py (revise it mannually) <span>before mc_gen, please delete NP.dat if there&#8217;s no NanoParticle in your system;</span> b: mc_gen.bash [make_mc_gen.x] [mc_gen] (revise .input whenever needed) c: makepair001.py | makepair_expand.py mv pairfile pairfile_rep (do all the repel for minimization) mv pairfile pairfile_no_soft (for the rest of the protocol, please do not ask why&#8230;)</p>
     </div>
 
   
