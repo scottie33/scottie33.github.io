@@ -5,8 +5,8 @@
         <description>blogwarEyd dy3rawgold - scottie33</description>
         <link>http://scottie33.github.io</link>
         <link>http://scottie33.github.io</link>
-        <lastBuildDate>2013-05-17T01:43:02+08:00</lastBuildDate>
-        <pubDate>2013-05-17T01:43:02+08:00</pubDate>
+        <lastBuildDate>2013-05-17T01:43:11+08:00</lastBuildDate>
+        <pubDate>2013-05-17T01:43:11+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -176,7 +176,7 @@ c: makepair001.py | makepair_expand.py&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;[www.google.com](http://www.google.com &amp;quot;go to google and dig something out to eat, pal&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;you will get &lt;a title='go to google and dig something out to eat, pal' href='http://www.google.com'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;you will get &lt;a href='http://www.google.com' title='go to google and dig something out to eat, pal'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
 
 &lt;p&gt;Or, &lt;strong&gt;&lt;em&gt;alternately&lt;/em&gt;&lt;/strong&gt;, may you type this:&lt;/p&gt;
 
@@ -193,21 +193,21 @@ c: makepair001.py | makepair_expand.py&lt;/code&gt;&lt;/pre&gt;
    [1]: http://www.google.com &amp;quot;better&amp;quot;
    [2]: http://www.bing.com &amp;quot;worse&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;No, I am not just saying it, since it&amp;#8217;s the truth:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;*[google][1] is better than [bing][2]* (*italic*);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;**[google][1] is better than [bing][2]** (**bold**);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;***[google][1] is better than [bing][2]*** (***bold &amp;amp; italic***);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;_And &amp;quot;_&amp;quot; also has the same effect here just as &amp;quot;\*&amp;quot;._&lt;/code&gt;&lt;/pre&gt;
 
