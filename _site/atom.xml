@@ -4,7 +4,7 @@
  <title>blogwarEyd dy3rawgold</title>
  <link href="http://scottie33.github.io/" rel="self"/>
  <link href="http://scottie33.github.io"/>
- <updated>2013-05-17T01:43:11+08:00</updated>
+ <updated>2013-05-17T01:43:39+08:00</updated>
  <id>http://scottie33.github.io</id>
  <author>
    <name>scottie33</name>
@@ -62,7 +62,16 @@ c: makepair001.py | makepair_expand.py&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;readlog.py&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;NOTE: for the [keyword], we shall set it the 1st keyword of dump keywords in your .log file, normally &amp;#8220;Step&amp;#8221;&lt;/p&gt;</content>
+&lt;p&gt;NOTE: for the [keyword], we shall set it the 1st keyword of dump keywords in your .log file, normally &amp;#8220;Step&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;2, see the result of logfile by view:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;create_html.bash
+[ dependencies: ]
+a, draw_data.gpl 
+    [ please note, tempdata.gpl needed, 
+    [ so actually these 2 are important and portable for any drawing) ]
+b, showdata.bash&lt;/code&gt;&lt;/pre&gt;</content>
  </entry>
  
  <entry>
