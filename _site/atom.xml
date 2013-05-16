@@ -4,7 +4,7 @@
  <title>blogwarEyd dy3rawgold</title>
  <link href="http://scottie33.github.io/" rel="self"/>
  <link href="http://scottie33.github.io"/>
- <updated>2013-05-17T01:26:52+08:00</updated>
+ <updated>2013-05-17T01:28:45+08:00</updated>
  <id>http://scottie33.github.io</id>
  <author>
    <name>scottie33</name>
@@ -31,25 +31,7 @@
 
 &lt;p&gt;HINT: just hit any command mentioned above in the command line to see &amp;#8216;how to&amp;#8217; ~&lt;/p&gt;
 
-&lt;p&gt;&lt;span&gt;currently dir ./oneNP/ will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;pre-run: &lt;span&gt;goto 3&lt;/span&gt;&lt;em&gt;1&lt;/em&gt;, lmp2pdb.py data.data (generate .psf and .pdb for post-processing) &lt;span&gt;goto 3&lt;/span&gt;&lt;em&gt;2&lt;/em&gt;, makepair will generate a pair_potential file for you, revise it if needed. &lt;span&gt;dont use this when system too compressed&lt;/span&gt;#2, after .dcd loaded by vmd: source doit.tcl 3, protocol to initialization of the system: a: random-NP.py | cubic-NP.py (revise it mannually) &lt;span&gt;before mc_gen, please delete NP.dat if there&amp;#8217;s no NanoParticle in your system;&lt;/span&gt; b: mc_gen.bash &lt;span&gt;make_mc_gen.x&lt;/span&gt; (revise .input whenever needed) c: makepair001.py | makepair_expand.py mv pairfile pairfile_rep (do all the repel for minimization) mv pairfile pairfile_no_soft (for the rest of the protocol, please do not ask why&amp;#8230;)&lt;/p&gt;
-
-&lt;p&gt;run: 1, runlist.bash&lt;/p&gt;
-
-&lt;p&gt;post-run: you can use the following cli to see your data-fig: 1, read the logfile: readlog.py &lt;em&gt;, for the &lt;span&gt;keyword&lt;/span&gt;, we shall set it the 1st keyword of dump keywords in your .log file, normally &amp;#8220;Step&amp;#8221; 2, see the result of logfile by view: create_html.bash &lt;span&gt;dependencies:&lt;/span&gt; a, draw_data.gpl &lt;span&gt;please note, tempdata.gpl needed, &lt;span&gt;so actually these 2 are important and portable for any drawing)&lt;/span&gt; b, showdata.bash HOW-TO: e.g.: ./readlog.py example.log ./create_html.bash example.gnuplot.dat (this file is created by the last command) or: ./readlog.py example.log Step example.inputfornextcmd ./create_html.bash example.inputfornextcmd&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;, topology of the usage: / create_html.bash readlog.py { \ getstress.py rdf.bash -&amp;gt; allpeak.py -&amp;gt; getpdb.bash (.psf needed, using lmp2pdb.py to generate it) contact.bash (.psf needed, using lmp2pdb.py to generate it) allpeak.py &lt;span&gt;need explanation&lt;/span&gt; getpdb.bash (.psf &amp;#8230; )&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;clean.bash will do purge for this command, use it carefully.&lt;/p&gt;
-
-&lt;p&gt;avevol.py (to see energy-volume and create the volume.in for the next deform.in if needed) Attention:&lt;/p&gt;
-
-&lt;p&gt;3, please be noted: trajectoy_analyze.tcl is great for the analysis of trajectory loaded in VMD, read the source for the example.&lt;/p&gt;
-
-&lt;p&gt;O(ne) C(lick) S(eries): Lammps .log file. Dependencies: bash, tcl, python, gnuplot, VMD; Comman Line Format : cmd log-filename. description: you will have a .html (or all figures in .eps) of the information you are able to get from .log from a Lammps production run.&lt;/p&gt;
-
-&lt;p&gt;if any problem, improvement made, or any Q, please contact me: leiw@ustc.edu.cn&lt;/p&gt;</content>
+&lt;p&gt;&lt;span&gt;currently dir ./oneNP/ will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.&lt;/span&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -168,7 +150,7 @@
 
 &lt;pre&gt;&lt;code&gt;[www.google.com](http://www.google.com &amp;quot;go to google and dig something out to eat, pal&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;you will get &lt;a href='http://www.google.com' title='go to google and dig something out to eat, pal'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;you will get &lt;a title='go to google and dig something out to eat, pal' href='http://www.google.com'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
 
 &lt;p&gt;Or, &lt;strong&gt;&lt;em&gt;alternately&lt;/em&gt;&lt;/strong&gt;, may you type this:&lt;/p&gt;
 
@@ -185,21 +167,21 @@
    [1]: http://www.google.com &amp;quot;better&amp;quot;
    [2]: http://www.bing.com &amp;quot;worse&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;No, I am not just saying it, since it&amp;#8217;s the truth:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;*[google][1] is better than [bing][2]* (*italic*);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;**[google][1] is better than [bing][2]** (**bold**);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;***[google][1] is better than [bing][2]*** (***bold &amp;amp; italic***);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a href='http://www.google.com' title='better'&gt;google&lt;/a&gt; is better than &lt;a href='http://www.bing.com' title='worse'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;_And &amp;quot;_&amp;quot; also has the same effect here just as &amp;quot;\*&amp;quot;._&lt;/code&gt;&lt;/pre&gt;
 
