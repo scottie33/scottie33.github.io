@@ -5,8 +5,8 @@
         <description>blogwarEyd dy3rawgold - scottie33</description>
         <link>http://scottie33.github.io</link>
         <link>http://scottie33.github.io</link>
-        <lastBuildDate>2013-05-17T01:28:45+08:00</lastBuildDate>
-        <pubDate>2013-05-17T01:28:45+08:00</pubDate>
+        <lastBuildDate>2013-05-17T01:29:15+08:00</lastBuildDate>
+        <pubDate>2013-05-17T01:29:15+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -24,9 +24,7 @@
 
 &lt;pre&gt;&lt;code&gt;wget https://github.com/scottie33/amorphous_polymer_lammps/archive/master.zip &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;HINT: just hit any command mentioned above in the command line to see &amp;#8216;how to&amp;#8217; ~&lt;/p&gt;
-
-&lt;p&gt;&lt;span&gt;currently dir ./oneNP/ will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.&lt;/span&gt;&lt;/p&gt;</description>
+&lt;p&gt;HINT: just hit any command mentioned above in the command line to see &amp;#8216;how to&amp;#8217; ~&lt;/p&gt;</description>
                 <link>http://scottie33.github.io/Molecular%20Dynamics/2013/05/17/readme</link>
                 <guid>http://scottie33.github.io/Molecular%20Dynamics/2013/05/17/readme</guid>
                 <pubDate>2013-05-17T00:00:00+08:00</pubDate>
