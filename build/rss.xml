@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>blogwarEyd dy3rawgold</title>
+        <description>blogwarEyd dy3rawgold - scottie33</description>
+        <link>http://scottie33.github.io</link>
+        <link>http://scottie33.github.io</link>
+        <lastBuildDate>2013-05-16T16:29:00+08:00</lastBuildDate>
+        <pubDate>2013-05-16T16:29:00+08:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>2 snapshots</title>
+                <description>&lt;p&gt;&lt;img alt='9.0' src='/images/2013/May/04/snapshot-9.0.png' /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt='4.75' src='/images/2013/May/04/snapshot-4.75.png' /&gt;&lt;/p&gt;</description>
+                <link>http://scottie33.github.io/Molecular%20Dynamics/2013/05/04/2-snapshots</link>
+                <guid>http://scottie33.github.io/Molecular%20Dynamics/2013/05/04/2-snapshots</guid>
+                <pubDate>2013-05-04T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Finding the glass transition temperature</title>
+                <description>&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/scottie33/finding-glassT/archive/master.zip'&gt;Download&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+                <link>http://scottie33.github.io/Molecular%20Dynamics/2013/04/23/finding-the-glass-transition-temperature</link>
+                <guid>http://scottie33.github.io/Molecular%20Dynamics/2013/04/23/finding-the-glass-transition-temperature</guid>
+                <pubDate>2013-04-23T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Interest Inflation in China (updating)</title>
+                <description>&lt;h3 id='inflation_rates_interest_in_china'&gt;Inflation rates Interest in China&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt='interest-inflation-rate' src='/images/2013/April/22/Rate.png' /&gt;&lt;/p&gt;
+&lt;hr /&gt;</description>
+                <link>http://scottie33.github.io/2013/04/22/interest-inflation-in-china-updating</link>
+                <guid>http://scottie33.github.io/2013/04/22/interest-inflation-in-china-updating</guid>
+                <pubDate>2013-04-22T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>PRAY FOR YAAN</title>
+                <description>&lt;h1 id='pray_for_yaan__requiescat_in_pace_to_lost_souls'&gt;Pray for Ya&amp;#8217;an &amp;amp; Requiescat in pace to lost souls.&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;      +
+     + +
+    /   \
+   | |\  |
+  |  | | |
+   | |/  /
+ ___|	|___ 
+|           |
+|   R I P   |
+|           |
+|           |
+|           |
+|           |
+|           |
+-------------&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;</description>
+                <link>http://scottie33.github.io/2013/04/21/rip-yaan</link>
+                <guid>http://scottie33.github.io/2013/04/21/rip-yaan</guid>
+                <pubDate>2013-04-21T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>link to my lammps setup for PNC</title>
+                <description>&lt;p&gt;Instructions&amp;#8230; I am too tired to type it out, just read the README, cheers.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/scottie33/amorphous_polymer_lammps/archive/master.zip'&gt;Download&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;Updated April 21st, 2013&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/scottie33/amorphous_polymer_lammps/blob/master/README'&gt;README&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;New stuff added: (&lt;em&gt;Updated April 21st, 2013&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Contacts of Polymer-Polymer, Polymer-Nanoparticle, Nanoparticle-Nanoparticle.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href='http://en.wikipedia.org/wiki/Command-line_interface'&gt;CLI&lt;/a&gt;&lt;/strong&gt; usage: &lt;strong&gt;contact.bash&lt;/strong&gt; your.psf your.dcd residfrom residto residfrom residto sigma1 sigma2&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;e.g.&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;contact.bash my.psf my.dcd 1 64 65 65 4.7 6.1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the above example, &lt;strong&gt;resid 1 to 64&lt;/strong&gt; are polymers, they will be chosen as the 1st selection for &lt;a href='http://www.ks.uiuc.edu/Research/vmd/'&gt;VMD&lt;/a&gt;, &lt;strong&gt;resid 65&lt;/strong&gt;, the particle, the 2nd selection, and &lt;strong&gt;4.7, 6.1&lt;/strong&gt; are the pair_coeff sigmas for polymer and nanoparticle respectively in the system we set up. At last you will have a contact evolution figure with respect to the timestep (system unit). Hope you can understand this poor instruction&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Here is a simple result, yes, you will see this kind of figure after the command run (this one is from a very short trajectory, since it&amp;#8217;s 3 am, I don&amp;#8217;t want to wait for a long trajectory to be hacked).&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt='an contact example' src='/images/2013/April/21/Contacts.png' /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;By the way, it&amp;#8217;s a little bit slow by far, depending on the size of your system and the length of the trajectory (timestep unit), I am focusing on it trying to optimize its performance, accelerating is always good, high-way drivers.&lt;/p&gt;
+
+&lt;p&gt;Have fun, Cheers.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt='an rdf example' src='/images/2013/April/21/grdf.png' /&gt;&lt;/p&gt;
+&lt;hr /&gt;</description>
+                <link>http://scottie33.github.io/Molecular%20Dynamics/2013/04/19/link-to-my-lammps-setup-for-pnc</link>
+                <guid>http://scottie33.github.io/Molecular%20Dynamics/2013/04/19/link-to-my-lammps-setup-for-pnc</guid>
+                <pubDate>2013-04-19T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Markdown I learned so far</title>
+                <description>&lt;p&gt;So far, what I know about markdown. Please follow me if you&amp;#8217;re interested.&lt;/p&gt;
+
+&lt;h2 id='the_following_code_is_easy_have_fun_'&gt;The following code is easy, have fun =)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;Here we start, the &lt;strong&gt;&lt;em&gt;first line&lt;/em&gt;&lt;/strong&gt; is, (please be noted that every code line you want it to only display, or say, not to be transcripted by markdown, is indented at least 4 spaces)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;http://scottie33.github.io&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you will get: &lt;a href='http://scottie33.github.io'&gt;http://scottie33.github.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;genius@github.com&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you will get: &lt;a href='mailto:genius@github.com'&gt;&amp;#103;&amp;#101;&amp;#110;&amp;#105;&amp;#117;&amp;#115;&amp;#064;&amp;#103;&amp;#105;&amp;#116;&amp;#104;&amp;#117;&amp;#098;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;When you want to throw out some &lt;strong&gt;&lt;em&gt;text with link&lt;/em&gt;&lt;/strong&gt;, e.g.,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[www.google.com](http://www.google.com)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you will get &lt;a href='http://www.google.com'&gt;www.google.com&lt;/a&gt;. and more,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[www.google.com](http://www.google.com &amp;quot;go to google and dig something out to eat, pal&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you will get &lt;a title='go to google and dig something out to eat, pal' href='http://www.google.com'&gt;www.google.com&lt;/a&gt; (&lt;strong&gt;&lt;em&gt;put your mouse on the link. oh, don&amp;#8217;t click it, just put it there =)&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;Or, &lt;strong&gt;&lt;em&gt;alternately&lt;/em&gt;&lt;/strong&gt;, may you type this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[www.github.com][] is the link we want to go to.
+
+   [www.github.com]: http://www.github.com (this line can not be indented more than 3 spaces to take effect)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href='http://www.github.com'&gt;www.github.com&lt;/a&gt; is the link we want to go to.&lt;/p&gt;
+
+&lt;p&gt;You may also &lt;strong&gt;&lt;em&gt;try this way&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[google][1] is better than [bing][2]
+
+   [1]: http://www.google.com &amp;quot;better&amp;quot;
+   [2]: http://www.bing.com &amp;quot;worse&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;No, I am not just saying it, since it&amp;#8217;s the truth:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*[google][1] is better than [bing][2]* (*italic*);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt; (&lt;em&gt;italic&lt;/em&gt;);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;**[google][1] is better than [bing][2]** (**bold**);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;bold&lt;/strong&gt;);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;***[google][1] is better than [bing][2]*** (***bold &amp;amp; italic***);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a title='better' href='http://www.google.com'&gt;google&lt;/a&gt; is better than &lt;a title='worse' href='http://www.bing.com'&gt;bing&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;strong&gt;&lt;em&gt;bold &amp;amp; italic&lt;/em&gt;&lt;/strong&gt;);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;_And &amp;quot;_&amp;quot; also has the same effect here just as &amp;quot;\*&amp;quot;._&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;And &amp;#8220;-&amp;#8221; also has the same effect here just as &amp;#8221;*&amp;#8221;.&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Then we show some sentences here, one by one:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; Hi there, how have you been?&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hi there, how have you been?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; Good, good, how about *you*?&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Good, good, how about &lt;em&gt;you&lt;/em&gt;?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;Title
+=====&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id='title'&gt;Title&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Title
+-----&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='title'&gt;Title&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;--- (a split line)&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;---- (a split line too)&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;***** (still, a split line)&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;****** (WTH, a split line)&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;- - - - - (Gsf!@$#%^Q@, a split line ... )&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;* * * * * * (... anyway, they are all split lines ...)&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;##### small title
+#### medium title
+### large title
+## very large title
+# huge title&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id='small_title'&gt;small title&lt;/h5&gt;
+
+&lt;h4 id='medium_title'&gt;medium title&lt;/h4&gt;
+
+&lt;h3 id='large_title'&gt;large title&lt;/h3&gt;
+
+&lt;h2 id='very_large_title'&gt;very large title&lt;/h2&gt;
+
+&lt;h1 id='huge_title'&gt;huge title&lt;/h1&gt;
+&lt;hr /&gt;&lt;hr /&gt;
+&lt;p&gt;Eh, &lt;strong&gt;&lt;em&gt;finally&lt;/em&gt;&lt;/strong&gt; we are about to end this, tired? alright, here&amp;#8217;s a photo of &lt;a href='http://www.imdb.com/name/nm0915208/'&gt;&lt;strong&gt;Naomi Watts&lt;/strong&gt;&lt;/a&gt;, check it out:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![I am an image](http://somewhere.jpg &amp;quot;I am an image&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img alt='I am a image' src='http://image.qpicture.com/image/n/artist-naomi-watts/naomi-watts-384599.jpg' /&gt;&lt;/p&gt;</description>
+                <link>http://scottie33.github.io/Coding/2013/04/18/markdown-i-learned-so-far</link>
+                <guid>http://scottie33.github.io/Coding/2013/04/18/markdown-i-learned-so-far</guid>
+                <pubDate>2013-04-18T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>A problem found when we are performing a lammps CG NPC model</title>
+                <description>&lt;h3 id='the_problem'&gt;The problem&lt;/h3&gt;
+
+&lt;p&gt;When we decide to explore the &lt;strong&gt;&lt;a href='http://en.wikipedia.org/wiki/Radial_distribution_function'&gt;Radius Distribution Function&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;RDF&lt;/strong&gt;) of our &lt;strong&gt;NanoParticle Polymermatrix Composite&lt;/strong&gt; (&lt;strong&gt;NPC)&lt;/strong&gt; system, we found that there is a peak around &lt;em&gt;R&lt;/em&gt;=0.0 (in angstrom), which is impossible since in our model the interaction coefficients are set to prevent &amp;#8216;atom&amp;#8217;s from approaching each other closer than ~4.0.&lt;/p&gt;
+
+&lt;p&gt;After checking the trajectories with &lt;strong&gt;&lt;a href='http://www.ks.uiuc.edu/Research/vmd/'&gt;Visual Molecular Dynamics&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;VMD&lt;/strong&gt;), we found that &amp;#8216;atom&amp;#8217;s were able to get as close as 0.0 to their &amp;#8216;second neighbor&amp;#8217;, in almost every frame. Given this phenomenon is physically unreal and directly results to the RDF unusual peak we found, we thought it was more or less the reason, and it might be caused by the implicit shutdown of 1-3 interaction between particles in &lt;strong&gt;&lt;a href='http://lammps.sandia.gov'&gt;lammps&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id='why'&gt;Why&lt;/h3&gt;
+
+&lt;p&gt;In lammps, or some of other &lt;strong&gt;&lt;a href='http://en.wikipedia.org/wiki/Molecular_dynamics'&gt;Molecular Dynamics&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;MD&lt;/strong&gt;) softwares, the 1-3 and 1-4 interactions are implicitly ignored. The contributions of 1-3 and 1-4 interactions are normally considered included in angle- and dihedral- calculations respectively, inherently due to the way we extract angle- and dihedral- coeffients from experients data and artificial method. In our model, we consider no angle- and diheral- interactions at all, though tragedily, forgot to explicitly tell lammps we need to have 1-3 and 1-4 interactions calculated to mimic the real physical world.&lt;/p&gt;
+
+&lt;h3 id='howto_fix_it'&gt;How-to fix it&lt;/h3&gt;
+
+&lt;p&gt;We add the following line into the .in file for lammps to fix this problem:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;special_bonds fene angle no dihedral no&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;special_bonds lj 0.0 1.0 1.0&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It just runs fine now and produces a reasonable result.&lt;/p&gt;</description>
+                <link>http://scottie33.github.io/Molecular%20Dynamics/2013/04/18/a-problem-found-when-we-are-performing-a-lammps-cg-npc-model</link>
+                <guid>http://scottie33.github.io/Molecular%20Dynamics/2013/04/18/a-problem-found-when-we-are-performing-a-lammps-cg-npc-model</guid>
+                <pubDate>2013-04-18T00:00:00+08:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>
