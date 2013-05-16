@@ -4,7 +4,7 @@
  <title>blogwarEyd dy3rawgold</title>
  <link href="http://scottie33.github.io/" rel="self"/>
  <link href="http://scottie33.github.io"/>
- <updated>2013-05-17T01:29:15+08:00</updated>
+ <updated>2013-05-17T01:30:53+08:00</updated>
  <id>http://scottie33.github.io</id>
  <author>
    <name>scottie33</name>
@@ -17,19 +17,21 @@
    <link href="http://scottie33.github.io/Molecular%20Dynamics/2013/05/17/readme"/>
    <updated>2013-05-17T00:00:00+08:00</updated>
    <id>http://scottie33.github.io/Molecular%20Dynamics/2013/05/17/readme</id>
-   <content type="html">&lt;p&gt;&lt;img alt='pnp.png' src='/images/2013/April/25/pnp.png' /&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;img src='/images/2013/April/25/pnp.png' alt='pnp.png' /&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='beg.png' src='/images/2013/April/25/beg.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/2013/April/25/beg.png' alt='beg.png' /&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='GlassTT.eps.png' src='/images/2013/April/25/GlassTT.eps.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/2013/April/25/GlassTT.eps.png' alt='GlassTT.eps.png' /&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='ff-rdf.eps.png' src='/images/2013/April/25/ff-rdf.eps.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/2013/April/25/ff-rdf.eps.png' alt='ff-rdf.eps.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;to get the newest version:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;wget https://github.com/scottie33/amorphous_polymer_lammps/archive/master.zip &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;HINT: just hit any command mentioned above in the command line to see &amp;#8216;how to&amp;#8217; ~&lt;/p&gt;</content>
+&lt;p&gt;HINT: just hit any command mentioned above in the command line to see &amp;#8216;how to&amp;#8217; ~&lt;/p&gt;
+
+&lt;p&gt;currently dir &lt;strong&gt;oneNP&lt;/strong&gt; will show you a protocol of a huge NP (scaled as the RG of ea. polymer) with polymers.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -37,9 +39,9 @@
    <link href="http://scottie33.github.io/Molecular%20Dynamics/2013/05/04/2-snapshots"/>
    <updated>2013-05-04T00:00:00+08:00</updated>
    <id>http://scottie33.github.io/Molecular%20Dynamics/2013/05/04/2-snapshots</id>
-   <content type="html">&lt;p&gt;&lt;img alt='9.0' src='/images/2013/May/04/snapshot-9.0.png' /&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;img src='/images/2013/May/04/snapshot-9.0.png' alt='9.0' /&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='4.75' src='/images/2013/May/04/snapshot-4.75.png' /&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;img src='/images/2013/May/04/snapshot-4.75.png' alt='4.75' /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -57,7 +59,7 @@
    <id>http://scottie33.github.io/2013/04/22/interest-inflation-in-china-updating</id>
    <content type="html">&lt;h3 id='inflation_rates_interest_in_china'&gt;Inflation rates Interest in China&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='interest-inflation-rate' src='/images/2013/April/22/Rate.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/2013/April/22/Rate.png' alt='interest-inflation-rate' /&gt;&lt;/p&gt;
 &lt;hr /&gt;</content>
  </entry>
  
@@ -111,13 +113,13 @@
 
 &lt;p&gt;Here is a simple result, yes, you will see this kind of figure after the command run (this one is from a very short trajectory, since it&amp;#8217;s 3 am, I don&amp;#8217;t want to wait for a long trajectory to be hacked).&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='an contact example' src='/images/2013/April/21/Contacts.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/2013/April/21/Contacts.png' alt='an contact example' /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;By the way, it&amp;#8217;s a little bit slow by far, depending on the size of your system and the length of the trajectory (timestep unit), I am focusing on it trying to optimize its performance, accelerating is always good, high-way drivers.&lt;/p&gt;
 
 &lt;p&gt;Have fun, Cheers.&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt='an rdf example' src='/images/2013/April/21/grdf.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/2013/April/21/grdf.png' alt='an rdf example' /&gt;&lt;/p&gt;
 &lt;hr /&gt;</content>
  </entry>
  
@@ -241,7 +243,7 @@
 
 &lt;pre&gt;&lt;code&gt;![I am an image](http://somewhere.jpg &amp;quot;I am an image&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt='I am a image' src='http://image.qpicture.com/image/n/artist-naomi-watts/naomi-watts-384599.jpg' /&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;img src='http://image.qpicture.com/image/n/artist-naomi-watts/naomi-watts-384599.jpg' alt='I am a image' /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
